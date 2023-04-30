@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditText
+        android:id="@+id/et_book_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Book Name"/>
+
+    <EditText
+        android:id="@+id/et_book_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Book Description"/>
+
+    <EditText
+        android:id="@+id/et_book_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Book Price"/>
+
+    <EditText
+        android:id="@+id/et_book_rate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Book Rate"/>
+
+    <Button
+        android:id="@+id/btn_add_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Image"/>
+
+    <ImageView
+        android:id="@+id/iv_book_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_add_book"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Book"/>
+
+</LinearLayout>
