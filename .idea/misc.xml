@@ -3,13 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/drawable/splash_screen.xml" value="0.2585" />
         <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/layout/activity_add_book.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/layout/activity_book_details.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/layout/activity_bootom_nav.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/layout/activity_bottom_nav.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/layout/activity_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/layout/activity_home2.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/layout/activity_main.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/layout/activity_profile.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/layout/activity_sign_up.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/layout/activity_sign_up.xml" value="0.1" />
         <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
       </map>
     </option>
