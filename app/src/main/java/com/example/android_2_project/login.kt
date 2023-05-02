@@ -23,7 +23,7 @@ class login : AppCompatActivity() {
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
                             Toast.makeText(this, "Login Success!", Toast.LENGTH_SHORT).show()
-                            val intent = Intent(this, login::class.java)
+                            val intent = Intent(this, add_book::class.java)
                             startActivity(intent)
                         } else {
                             Toast.makeText(this, "Login Failed!", Toast.LENGTH_SHORT).show()
