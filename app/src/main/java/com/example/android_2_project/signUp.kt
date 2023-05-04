@@ -4,7 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
 
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_sign_up.*
@@ -28,6 +30,35 @@ class signUp : AppCompatActivity() {
                             Toast.makeText(this, "Register success!", Toast.LENGTH_SHORT).show()
                             val intent = Intent(this, login::class.java)
                             startActivity(intent)
+                            ///
+                            val user = User(
+                                uid = FirebaseAuth.getInstance().currentUser?.uid,
+                                name = username_field.text.toString(),
+                                email = FirebaseAuth.getInstance().currentUser?.email,
+                                password = password_field.text.toString(),
+                                address = location_field.text.toString(),
+                                dob = dob_field.text.toString()
+
+
+                            )
+                            FirebaseFirestore.getInstance().collection("users")
+                                .document(user.uid!!)
+                                .set(user)
+                                .addOnSuccessListener {
+                                    Toast.makeText(
+                                        this,
+                                        "User info saved successfully",
+                                        Toast.LENGTH_SHORT
+                                    ).show()
+                                }
+                                .addOnFailureListener { e ->
+                                    Toast.makeText(
+                                        this,
+                                        "Failed to  save user info ",
+                                        Toast.LENGTH_SHORT
+                                    ).show()
+                                }
+                            ///
                         } else {
                             Toast.makeText(this, "Registration failed!", Toast.LENGTH_SHORT).show()
 

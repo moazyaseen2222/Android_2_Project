@@ -69,21 +69,34 @@ class add_book : AppCompatActivity() {
                     "https://www.englishexercises.org/exercisesmaker/uploads/images/1747201/book.jpg"
 
 
-                val data = hashMapOf(
-                    "name" to name,
-                    "description" to description,
-                    "price" to "$price$",
-                    "rate" to "$rate Stars",
-                    "image" to imageURL,
-                    "timestamp" to FieldValue.serverTimestamp()
-                )
+
+                val book =  Book(name, description, "$price$", "$rate ⭐",imageURL)
+
+//                db.collection("books").add(book)
+//                    .addOnSuccessListener {
+//                        Toast.makeText(this,"Book Added",Toast.LENGTH_SHORT).show()
+//                    }
+//                    .addOnFailureListener {
+//                        Toast.makeText(this,"Failed",Toast.LENGTH_SHORT).show()
+//
+//                    }
+
+
+//                val data = hashMapOf(
+//                    "name" to name,
+//                    "description" to description,
+//                    "price" to "$price$",
+//                    "rate" to "$rate Stars",
+//                    "image" to imageURL,
+//                    "timestamp" to FieldValue.serverTimestamp()
+//                )
 
                 if (name.isEmpty() || description.isEmpty() || price.isEmpty() || rate.isEmpty()/* || imageUri == null*/) {
                     Toast.makeText(applicationContext, "Please fill all fields", Toast.LENGTH_SHORT)
                         .show()
                 } else {
                     db.collection("books")
-                        .add(data)
+                        .add(book)
                         .addOnSuccessListener {
                             Toast.makeText(
                                 applicationContext,

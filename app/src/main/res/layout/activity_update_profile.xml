@@ -9,15 +9,15 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_marginTop="10dp"
-        android:layout_marginStart="88dp"
+        android:layout_marginStart="120dp"
         android:layout_marginBottom="32dp"
-        android:text="Create an account"
+        android:text="Update profile"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/username_field"
+        android:id="@+id/uusername_field"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/header_text"
@@ -26,21 +26,13 @@
         android:hint="Username"
         android:inputType="text" />
 
-    <EditText
-        android:id="@+id/email_field"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/username_field"
-        android:layout_marginHorizontal="32dp"
-        android:layout_marginBottom="16dp"
-        android:hint="Email"
-        android:inputType="textEmailAddress" />
+
 
     <EditText
-        android:id="@+id/password_field"
+        android:id="@+id/upassword_field"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/email_field"
+        android:layout_below="@id/uusername_field"
         android:layout_marginHorizontal="32dp"
         android:layout_marginBottom="16dp"
         android:hint="Password"
@@ -48,40 +40,39 @@
 
 
     <EditText
-        android:id="@+id/location_field"
+        android:id="@+id/ulocation_field"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/password_field"
+        android:layout_below="@id/upassword_field"
         android:layout_centerHorizontal="true"
         android:layout_marginHorizontal="32dp"
-        android:layout_marginTop="25dp"
         android:layout_marginBottom="16dp"
         android:hint="Address"
         android:inputType = "text" />
 
     <EditText
-        android:id="@+id/dob_field"
+        android:id="@+id/udob_field"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/password_field"
+        android:layout_below="@id/upassword_field"
         android:layout_centerHorizontal="true"
         android:layout_marginHorizontal="32dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="55dp"
         android:layout_marginBottom="16dp"
         android:hint="Date Of Birth"
         android:inputType="text" />
 
     <Button
-        android:id="@+id/sign_up_button"
+        android:id="@+id/update_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/dob_field"
+        android:layout_below="@id/udob_field"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="44dp"
         android:background="@color/black"
         android:paddingHorizontal="32dp"
         android:paddingVertical="16dp"
-        android:text="Sign Up"
+        android:text="Update"
         android:textColor="@color/white" />
 
 </RelativeLayout>
