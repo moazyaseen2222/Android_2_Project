@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/drawable/background.xml" value="0.17" />
         <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/drawable/image.xml" value="0.1035" />
         <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/drawable/splash_screen.xml" value="0.2585" />
         <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/layout/activity_add_book.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/layout/activity_admin.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/layout/activity_book_details.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/layout/activity_bootom_nav.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/layout/activity_bottom_nav.xml" value="0.25416666666666665" />
@@ -13,9 +15,15 @@
         <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/layout/activity_home2.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/layout/activity_map.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/layout/activity_my_books.xml" value="0.264" />
         <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/layout/activity_profile.xml" value="0.264" />
+        <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/layout/activity_search_book.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/layout/activity_sign_up.xml" value="0.1" />
+        <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/layout/activity_statistics.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/layout/activity_update_profile.xml" value="0.264" />
+        <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/layout/activity_user_system.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/layout/list_items.xml" value="0.253125" />
         <entry key="..\:/Users/sa/StudioProjects/Android_2_Project/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
       </map>
     </option>

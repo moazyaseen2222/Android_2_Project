@@ -3,15 +3,13 @@ package com.example.android_2_project
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Editable
 import android.widget.Toast
 import coil.load
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.android.synthetic.main.activity_add_book.*
 import kotlinx.android.synthetic.main.activity_profile.*
 
-class profile : AppCompatActivity() {
+class Profile : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
@@ -46,7 +44,7 @@ class profile : AppCompatActivity() {
             }
 
         btn_update_data.setOnClickListener {
-            val intent = Intent(this, update_profile::class.java)
+            val intent = Intent(this, UpdateProfile::class.java)
             startActivity(intent)
         }
 

@@ -19,10 +19,10 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.io.IOException
 
 
-class add_book : AppCompatActivity() {
+class AddBook : AppCompatActivity() {
 
     private val db: FirebaseFirestore = FirebaseFirestore.getInstance()
-    val collectionRef = db.collection("books")
+    //val collectionRef = db.collection("books")
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -104,7 +104,7 @@ class add_book : AppCompatActivity() {
                                 Toast.LENGTH_SHORT
                             )
                                 .show()
-                            val intent = Intent(this, home::class.java)
+                            val intent = Intent(this, home_::class.java)
                             startActivity(intent)
                         }
                         .addOnFailureListener {

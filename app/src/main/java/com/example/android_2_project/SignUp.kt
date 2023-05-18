@@ -11,7 +11,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
-class signUp : AppCompatActivity() {
+class SignUp : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
@@ -28,7 +28,7 @@ class signUp : AppCompatActivity() {
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
                             Toast.makeText(this, "Register success!", Toast.LENGTH_SHORT).show()
-                            val intent = Intent(this, login::class.java)
+                            val intent = Intent(this, Login::class.java)
                             startActivity(intent)
                             ///
                             val user = User(
@@ -62,7 +62,7 @@ class signUp : AppCompatActivity() {
                         } else {
                             Toast.makeText(this, "Registration failed!", Toast.LENGTH_SHORT).show()
 
-                            val intent = Intent(this, signUp::class.java)
+                            val intent = Intent(this, SignUp::class.java)
                             startActivity(intent)
                         }
                     }

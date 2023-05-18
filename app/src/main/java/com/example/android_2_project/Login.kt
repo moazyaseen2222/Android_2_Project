@@ -2,16 +2,16 @@ package com.example.android_2_project
 
 
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_login.*
 
-class login : AppCompatActivity() {
+class Login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -25,11 +25,21 @@ class login : AppCompatActivity() {
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
                             Toast.makeText(this, "Login Success!", Toast.LENGTH_SHORT).show()
-                            val intent = Intent(this, profile::class.java)
+                            val intent = Intent(this, home_::class.java)
                             startActivity(intent)
+                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                                if (getBaseContext().checkSelfPermission("android.permission.READ_DEVICE_CONFIG") == PackageManager.PERMISSION_GRANTED) {
+                                    // The app has permission to read system properties
+                                    print("************************************* OK NO ERROR *******************************")
+                                } else {
+                                    // The app does not have permission to read system properties
+                                    print("*************************************  ERROR *******************************")
+                                }
+                            }
+
                         } else {
                             Toast.makeText(this, "Login Failed!", Toast.LENGTH_SHORT).show()
-                            val intent = Intent(this, login::class.java)
+                            val intent = Intent(this, Login::class.java)
                             startActivity(intent)
                         }
                     }
