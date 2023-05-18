@@ -49,7 +49,7 @@ class Admin : AppCompatActivity() {
         }
                              //عرض الخريطة
         button8.setOnClickListener {
-            val intent = Intent(this, GoogleMap::class.java)
+            val intent = Intent(this, Map_screen::class.java)
             startActivity(intent)
         }
                           // الصفحة الشخصية

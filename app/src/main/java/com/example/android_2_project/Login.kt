@@ -25,7 +25,7 @@ class Login : AppCompatActivity() {
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
                             Toast.makeText(this, "Login Success!", Toast.LENGTH_SHORT).show()
-                            val intent = Intent(this, home_::class.java)
+                            val intent = Intent(this, Admin::class.java)
                             startActivity(intent)
                             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
                                 if (getBaseContext().checkSelfPermission("android.permission.READ_DEVICE_CONFIG") == PackageManager.PERMISSION_GRANTED) {

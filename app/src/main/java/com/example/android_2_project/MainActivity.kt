@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         login_button.setOnClickListener {
-            val intent = Intent(this, GoogleMap::class.java)
+            val intent = Intent(this, Login::class.java)
             startActivity(intent)
         }
     }
