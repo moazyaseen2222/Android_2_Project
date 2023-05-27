@@ -1,22 +1,15 @@
 package com.example.android_2_project
 
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
-import android.net.Uri
 import android.os.Bundle
-import android.provider.MediaStore
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import coil.load
-import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_add_book.*
-import kotlinx.android.synthetic.main.activity_main.*
-import java.io.IOException
 
 
 class AddBook : AppCompatActivity() {
@@ -40,7 +33,7 @@ class AddBook : AppCompatActivity() {
 
 
 
-        etName = findViewById(R.id.et_book_name)
+        etName = findViewById(R.id.book_name)
         etDescription = findViewById(R.id.et_book_description)
         etPrice = findViewById(R.id.et_book_price)
         etRate = findViewById(R.id.et_book_rate)

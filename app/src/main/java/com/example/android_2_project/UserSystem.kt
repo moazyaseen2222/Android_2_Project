@@ -8,10 +8,15 @@ import kotlinx.android.synthetic.main.activity_admin.*
 import kotlinx.android.synthetic.main.activity_user_system.*
 
 class UserSystem : AppCompatActivity() {
+    override fun onBackPressed() {
+        finishAffinity()
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_system)
         setTitle("الصفحة الرئيسية")
+
+
 
 
         button9.setOnClickListener {
@@ -20,7 +25,7 @@ class UserSystem : AppCompatActivity() {
         }
 
         button10.setOnClickListener {
-            val intent = Intent(this, Profile::class.java)
+            val intent = Intent(this, MyBooks::class.java)
             startActivity(intent)
         }
 

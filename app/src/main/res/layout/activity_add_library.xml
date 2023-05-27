@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/background"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditText
+        android:id="@+id/library_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Library Name"/>
+
+    <EditText
+        android:id="@+id/library_booksNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Books Number"/>
+
+    <EditText
+        android:id="@+id/library_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Library Address"/>
+
+    <EditText
+        android:id="@+id/library_rate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Library Rate"/>
+
+    <Button
+        android:id="@+id/btn_add_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Image"/>
+
+    <ImageView
+        android:id="@+id/iv_library_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_add_book"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Library"/>
+
+</LinearLayout>

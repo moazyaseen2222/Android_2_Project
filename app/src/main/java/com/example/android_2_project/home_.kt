@@ -1,15 +1,18 @@
 package com.example.android_2_project
 
 import BookAdapter
+import android.content.Intent
 import android.icu.text.Transliterator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.ArrayAdapter
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -19,6 +22,11 @@ import kotlinx.android.synthetic.main.list_items.*
 
 class home_ : AppCompatActivity() {
 
+    override fun onBackPressed() {
+        val intent = Intent(this, Admin::class.java)
+        startActivity(intent)
+    }
+
     private var layoutManager: RecyclerView.LayoutManager? = null
     private var adapter: RecyclerView.Adapter<BookAdapter.ViewHolder>? = null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,23 +35,34 @@ class home_ : AppCompatActivity() {
         setTitle("Home")
 
         val db = Firebase.firestore
-        val booksCollectionRef = db.collection("books")
+        var dataList = listOf<DocumentSnapshot>()
 
-        booksCollectionRef.get().addOnSuccessListener { documents ->
-            val booksList = mutableListOf<Book>()
-            for (document in documents) {
-                val book = document.toObject(Book::class.java)
-                booksList.add(book)
-            }
-
-            for (item in booksList) {
-                titleTextView.setText(item.name)
-                descriptionTextView.setText(item.description)
-            }
-            // Use the booksList to populate your UI or perform other actions
-        }.addOnFailureListener { exception ->
-            Log.d("TAG", "Error getting documents: $exception")
+        db.collection("books").get().addOnSuccessListener { documents ->
+            dataList = documents.documents
         }
+
+        val adapter = ArrayAdapter<DocumentSnapshot>(this, android.R.layout.activity_list_item, dataList)
+        list_view.adapter = adapter
+
+
+//        val db = Firebase.firestore
+//        val booksCollectionRef = db.collection("books")
+
+//        booksCollectionRef.get().addOnSuccessListener { documents ->
+//            val booksList = mutableListOf<Book>()
+//            for (document in documents) {
+//                val book = document.toObject(Book::class.java)
+//                booksList.add(book)
+//            }
+//
+//            for (item in booksList) {
+//                titleTextView.setText(item.name)
+//                descriptionTextView.setText(item.description)
+//            }
+//            // Use the booksList to populate your UI or perform other actions
+//        }.addOnFailureListener { exception ->
+//            Log.d("TAG", "Error getting documents: $exception")
+//        }
 
 
 

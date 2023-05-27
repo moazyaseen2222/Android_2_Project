@@ -7,7 +7,9 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -24,9 +26,36 @@ class Login : AppCompatActivity() {
                 auth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
-                            Toast.makeText(this, "Login Success!", Toast.LENGTH_SHORT).show()
-                            val intent = Intent(this, Admin::class.java)
-                            startActivity(intent)
+
+
+                            ////
+                            val userDocRef = FirebaseFirestore.getInstance().collection("users")
+                                .document(FirebaseAuth.getInstance().currentUser?.uid!!)
+
+                            userDocRef.get()
+                                .addOnSuccessListener { document ->
+                                    if (document != null && document.exists()) {
+                                        val user = document.toObject(User::class.java)
+                                        if (user != null) {
+                                            if(user.userType == "Admin"){
+                                                val intent = Intent(this, Admin::class.java)
+                                                startActivity(intent)
+                                            }else{
+                                                val intent = Intent(this, UserSystem::class.java)
+                                                startActivity(intent)
+                                            }
+                                        }
+                                        Toast.makeText(this, "Login Success!", Toast.LENGTH_SHORT).show()
+                                    }
+                                }
+                                .addOnFailureListener { exception ->
+                                    Toast.makeText(this, "Unavailable user!", Toast.LENGTH_SHORT)
+                                        .show()
+                                }
+                            ////
+
+
+
                             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
                                 if (getBaseContext().checkSelfPermission("android.permission.READ_DEVICE_CONFIG") == PackageManager.PERMISSION_GRANTED) {
                                     // The app has permission to read system properties

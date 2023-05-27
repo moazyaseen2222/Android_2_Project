@@ -10,7 +10,6 @@ class BookDetails : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_book_details)
         setTitle("تفاصيل الكتاب")
-//        val im
 
     }
 }

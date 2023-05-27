@@ -7,7 +7,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <EditText
-        android:id="@+id/et_book_name"
+        android:id="@+id/book_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Book Name"/>

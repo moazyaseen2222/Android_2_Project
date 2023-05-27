@@ -7,6 +7,9 @@ import kotlinx.android.synthetic.main.activity_admin.*
 import kotlinx.android.synthetic.main.activity_map.*
 
 class Admin : AppCompatActivity() {
+    override fun onBackPressed() {
+        finishAffinity()
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_admin)
@@ -14,7 +17,7 @@ class Admin : AppCompatActivity() {
 
                    // اضافة مكتبة
         button.setOnClickListener {
-            val intent = Intent(this, AddBook::class.java)
+            val intent = Intent(this, addLibrary::class.java)
             startActivity(intent)
         }
 
@@ -44,7 +47,7 @@ class Admin : AppCompatActivity() {
         }
 
         button7.setOnClickListener {
-            val intent = Intent(this, home_::class.java)
+            val intent = Intent(this, Statistics::class.java)
             startActivity(intent)
         }
                              //عرض الخريطة

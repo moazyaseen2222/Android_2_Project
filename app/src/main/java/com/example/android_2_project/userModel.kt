@@ -7,4 +7,5 @@ data class User(
     val password: String? = "",
     val address: String? = "",
     val dob: String? = "",
+    val userType: String? = "",
 )

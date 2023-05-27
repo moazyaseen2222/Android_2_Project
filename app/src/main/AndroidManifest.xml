@@ -24,6 +24,18 @@
         android:theme="@style/Theme.Android_2_Project"
         tools:targetApi="31">
         <activity
+            android:name=".test"
+            android:exported="false" />
+        <activity
+            android:name=".LibrariesHome"
+            android:exported="false" />
+        <activity
+            android:name=".addLibrary"
+            android:exported="false" />
+        <activity
+            android:name=".LibraryModel"
+            android:exported="false" />
+        <activity
             android:name=".Map_screen"
             android:exported="false" />
         <!--
